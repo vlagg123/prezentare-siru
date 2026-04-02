@@ -267,17 +267,12 @@ p {
   gap: 10px;
 }
 
-.nav-logo-icon {
-  width: 32px;
-  height: 32px;
-  background: url('favicon-32x32.png') center/32px 32px no-repeat;
+.nav-logo-img {
+  height: 38px !important;
+  width: auto !important;
+  max-width: none !important;
+  display: block;
   flex-shrink: 0;
-}
-
-.nav-logo-icon svg {
-  width: 18px;
-  height: 18px;
-  fill: white;
 }
 
 .nav-links {
@@ -1484,18 +1479,6 @@ footer {
   color: var(--white);
 }
 
-.footer-logo-icon {
-  width: 32px;
-  height: 32px;
-  background: url('favicon-32x32.png') center/32px 32px no-repeat;
-  flex-shrink: 0;
-}
-
-.footer-logo-icon svg {
-  width: 16px;
-  height: 16px;
-  fill: var(--green-light);
-}
 
 .footer-tagline {
   font-size: 0.875rem;
