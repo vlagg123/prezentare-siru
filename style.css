@@ -268,9 +268,9 @@ p {
 }
 
 .nav-logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: url('favicon-32x32.png') center/32px 32px no-repeat;
   flex-shrink: 0;
 }
 
@@ -1485,9 +1485,10 @@ footer {
 }
 
 .footer-logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: url('favicon-32x32.png') center/32px 32px no-repeat;
+  flex-shrink: 0;
 }
 
 .footer-logo-icon svg {
