@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ro">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="SIRU – Sistem Integrat Resurse Umane pentru instituții publice. Dosar electronic complet, pontaj, concedii, salarizare și SSM într-o singură platformă.">
+  <title>SIRU – Sistem Integrat Resurse Umane</title>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C6 2 3 7 3 12s3 10 9 10 9-5 9-10S18 2 12 2zM8 10c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-4z" />
+            </svg>
+          </div>
+          SIRU
+        </a>
+        <ul class="nav-links">
+          <li><a href="#hero">Acasă</a></li>
+          <li><a href="#despre">Despre</a></li>
+          <li><a href="#servicii">Servicii</a></li>
+          <li><a href="#informatii">Informatii</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-outline" style="padding:9px 20px;font-size:.875rem;">Solicită ofertă</a>
+          <button class="nav-hamburger" id="hamburgerBtn" aria-label="Meniu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero" onclick="closeMenu()">Acasă</a>
+    <a href="#despre" onclick="closeMenu()">Despre</a>
+    <a href="#servicii" onclick="closeMenu()">Servicii</a>
+    <a href="#informatii" onclick="closeMenu()">Informatii</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+    <a href="#contact" class="btn btn-primary" style="margin-top:16px;justify-content:center;"
+      onclick="closeMenu()">Solicită ofertă</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-bg-blob hero-bg-blob-1"></div>
+    <div class="hero-bg-blob hero-bg-blob-2"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Text -->
+        <div class="hero-text reveal">
+          <div>
+            <span class="badge">
+              <span class="badge-dot"></span>
+              Platformă HR digitală pentru instituții publice
+            </span>
+          </div>
+          <h1>Date centralizate,<br><span>procese digitale</span> pentru<br>Resurse Umane</h1>
+          <p>SIRU este platforma digitală destinată administrării complete a documentelor și datelor angajaților,
+            reunind într-un singur loc pontajul, concediile, salarizarea, SSM și toate procesele esențiale de Resurse
+            Umane.</p>
+          <div class="hero-buttons">
+            <a href="#despre" class="btn btn-primary btn-lg">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              Descoperă platforma
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">Solicită ofertă</a>
+          </div>
+          <div class="hero-trust">
+            <div class="hero-trust-avatars">
+              <div class="av av-a">AI</div>
+              <div class="av av-b">MP</div>
+              <div class="av av-c">RD</div>
+            </div>
+            <p class="hero-trust-text"><strong>Soluție completă</strong> pentru instituții publice din România</p>
+          </div>
+        </div>
+        <!-- Visual -->
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="hero-card-wrap">
+            <div class="hero-float-badge float-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round">
+                <path
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+              Pontaje automate
+            </div>
+            <div class="hero-float-badge float-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+              Concedii automate
+            </div>
+            <div class="hero-main-card">
+              <div class="hero-card-header">
+                <div class="hero-card-icon">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <path d="M8 21h8M12 17v4" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="hero-card-title">Dosar electronic angajat</div>
+                  <div class="hero-card-sub">12 module integrate, date corelate</div>
+                </div>
+                <div class="hero-status-dot"></div>
+              </div>
+              <div class="hero-checklist">
+                <div class="hero-check-item">
+                  <span class="chk chk-done"><svg viewBox="0 0 12 12">
+                      <polyline points="2,6 5,9 10,3" />
+                    </svg></span>
+                  Concedii corelate automat cu pontajul
+                </div>
+                <div class="hero-check-item">
+                  <span class="chk chk-done"><svg viewBox="0 0 12 12">
+                      <polyline points="2,6 5,9 10,3" />
+                    </svg></span>
+                  Contract de muncă și dispoziții
+                </div>
+                <div class="hero-check-item">
+                  <span class="chk chk-done"><svg viewBox="0 0 12 12">
+                      <polyline points="2,6 5,9 10,3" />
+                    </svg></span>
+                  Salarizare integrată cu pontajul
+                </div>
+                <div class="hero-check-item">
+                  <span class="chk chk-done"><svg viewBox="0 0 12 12">
+                      <polyline points="2,6 5,9 10,3" />
+                    </svg></span>
+                  SSM și protecția muncii
+                </div>
+                <div class="hero-check-item">
+                  <span class="chk chk-done"><svg viewBox="0 0 12 12">
+                      <polyline points="2,6 5,9 10,3" />
+                    </svg></span>
+                  Export rapoarte PDF și Excel
+                </div>
+              </div>
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <div class="hero-stat-num">12</div>
+                  <div class="hero-stat-lbl">Module integrate</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat-num">Cloud</div>
+                  <div class="hero-stat-lbl">Date securizate</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat-num">100%</div>
+                  <div class="hero-stat-lbl">Date centralizate</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat-num">24/7</div>
+                  <div class="hero-stat-lbl">Suport tehnic dedicat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESPRE NOI ===== -->
+  <section id="despre" class="section">
+    <div class="container">
+      <div class="despre-grid">
+        <div class="despre-text reveal">
+          <div>
+            <span class="section-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v4M12 16h.01" />
+              </svg>
+              Despre SIRU
+            </span>
+            <h2>O platformă HR pe care te poți baza</h2>
+          </div>
+          <p>SIRU este o platformă digitală destinată administrării complete a documentelor și datelor angajaților
+            într-o primărie, reunind într-un singur loc procesele esențiale de evidență a personalului, pontaj,
+            concedii, documente și alte activități specifice Resurselor Umane.</p>
+          <p>Ideea centrală este să înlocuiască evidențele dispersate — fișiere, tabele, dosare fizice — cu un flux
+            unitar, trasabil și ușor de auditat: de la definirea rolului și a relației contractuale, până la prezență,
+            salarizare și obligații de securitate și sănătate în muncă.</p>
+          <a href="#contact" class="btn btn-primary" style="align-self:flex-start;margin-top:8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+            Contactează-ne
+          </a>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="despre-benefits">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <h4>Centralizare</h4>
+              <p>Un singur punct de acces pentru datele și documentele de Resurse Umane</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <h4>Trasabilitate</h4>
+              <p>Istoric clar al schimbărilor, valabilitatea actelor și aprobărilor</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+              </div>
+              <h4>Coerență între module</h4>
+              <p>Concedii ↔ Pontaj ↔ Salarizare; Fișa postului ↔ Evaluare ↔ Perfecționări</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                </svg>
+              </div>
+              <h4>Suport tehnic 24/7</h4>
+              <p>Asistență permanentă prin telefon, email și remote pentru orice situație</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICII ===== -->
+  <section id="servicii" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <path
+              d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+          </svg>
+          Servicii
+        </span>
+        <h2>Module pentru fiecare proces HR</h2>
+        <p>Platforma este organizată pe module, astfel încât informația să fie standardizată, ușor de găsit și corelată
+          automat între procese.</p>
+      </div>
+      <div class="servicii-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
+            </svg>
+          </div>
+          <h3>Fișa postului &amp; Dispoziții</h3>
+          <p>Definește rolul angajatului — responsabilități, competențe, relații ierarhice. Centralizează deciziile
+            interne cu istoric și dată de aplicare.</p>
+          <div class="service-arrow">Află mai mult <svg viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></div>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+            </svg>
+          </div>
+          <h3>Contract de muncă &amp; Documente</h3>
+          <p>Gestionează relația contractuală și istoricul modificărilor. Arhivă formală pentru acte, anexe, cereri și
+            decizii cu acces controlat.</p>
+          <div class="service-arrow">Află mai mult <svg viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+          </div>
+          <h3>Concedii &amp; Adeverințe</h3>
+          <p>Solicitări, aprobări, solduri și istoric; se reflectă automat în pontaj. Emitere adeverințe de venit sau
+            vechime prin flux cerere–verificare–arhivare.</p>
+          <div class="service-arrow">Află mai mult <svg viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
+            </svg>
+          </div>
+          <h3>Pontaj &amp; Salarizare</h3>
+          <p>Evidența timpului de lucru: prezență, absențe, ore suplimentare. Elemente salariale calculate și integrate
+            cu pontajul și contractul.</p>
+          <div class="service-arrow">Află mai mult <svg viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></div>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M9 9h6M9 13h6M9 17h4" />
+            </svg>
+          </div>
+          <h3>Evaluare &amp; Perfecționări</h3>
+          <p>Obiective, criterii, perioade și rezultate aliniate cu fișa postului. Urmărire cursuri, traininguri și
+            certificări pentru planificarea formării.</p>
+          <div class="service-arrow">Află mai mult <svg viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3>SSM &amp; Disciplină</h3>
+          <p>Instruiri, fișe și documente obligatorii pentru conformitate. Gestionarea abaterilor și măsurilor cu
+            evidențe asociate, respectând etapele interne.</p>
+          <div class="service-arrow">Află mai mult <svg viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DE CE URZI SOFT ===== -->
+  <section id="dece" class="section">
+    <div class="dece-bg-circle dece-bg-circle-1"></div>
+    <div class="dece-bg-circle dece-bg-circle-2"></div>
+    <div class="container">
+      <div class="section-header reveal" style="position:relative;z-index:1;">
+        <span class="section-label">De ce SIRU</span>
+        <h2>De ce să alegi SIRU?</h2>
+        <p style="color:rgba(255,255,255,.65);">Procese unificate, trasabile și ușor de auditat pentru instituții
+          publice.</p>
+      </div>
+      <div class="dece-grid">
+        <div class="dece-card reveal">
+          <div class="dece-icon"><svg viewBox="0 0 24 24">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg></div>
+          <h3>Centralizare completă</h3>
+          <p>Toate datele și documentele de Resurse Umane într-un singur loc. Fără evidențe dispersate în tabele și
+            dosare fizice.</p>
+        </div>
+        <div class="dece-card reveal reveal-delay-1">
+          <div class="dece-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg></div>
+          <h3>Flux unitar și trasabil</h3>
+          <p>De la definirea rolului până la salarizare — fiecare modificare are istoric clar și poate fi auditată
+            oricând.</p>
+        </div>
+        <div class="dece-card reveal reveal-delay-2">
+          <div class="dece-icon"><svg viewBox="0 0 24 24">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
+            </svg>
+          </div>
+          <h3>Corelări automate între module</h3>
+          <p>Concediile aprobate actualizează pontajul; pontajul influențează salarizarea. Fără intervenții manuale
+            repetitive.</p>
+        </div>
+        <div class="dece-card reveal">
+          <div class="dece-icon"><svg viewBox="0 0 24 24">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg></div>
+          <h3>Reducerea muncii manuale</h3>
+          <p>Mai puține tabele paralele și intervenții repetitive. Istoricul și evidența clară a concediilor,
+            salarizării și documentelor.</p>
+        </div>
+        <div class="dece-card reveal reveal-delay-1">
+          <div class="dece-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+            </svg></div>
+          <h3>Interfață simplă și intuitivă</h3>
+          <p>Navigare ușoară, fără pregătire tehnică avansată — toate funcțiile esențiale, la îndemână.</p>
+        </div>
+        <div class="dece-card reveal reveal-delay-2">
+          <div class="dece-icon"><svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg></div>
+          <h3>Dosar electronic modular</h3>
+          <p>Fiecare angajat are propriul dosar organizat pe module — informație standardizată, ușor de găsit și
+            corelată.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESPRE NOI 2 ===== -->
+  <section id="informatii" class="section">
+    <div class="container">
+      <div class="despre-grid">
+        <div class="despre-text reveal">
+          <div>
+            <span class="section-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v4M12 16h.01" />
+              </svg>
+              Implementare
+            </span>
+            <h2>Cum implementăm SIRU în instituția ta</h2>
+          </div>
+          <p>O implementare reușită începe cu alinierea proceselor interne și continuă cu configurare, migrare și
+            instruire. Parcurgem împreună 5 pași clari pentru a pune platforma în producție.</p>
+          <p>Preluăm lista angajaților din REGES și datele relevante din tabelele existente, adaptăm câmpurile și
+            șabloanele instituției tale, rulăm un pilot pe un compartiment și oferim training complet înainte de
+            lansare.</p>
+          <a href="#contact" class="btn btn-primary" style="align-self:flex-start;margin-top:8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+            Contactează-ne
+          </a>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="despre-benefits">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <h4>1. Analiză &amp; configurare</h4>
+              <p>Workshop cu Resurse Umane; definirea rolurilor, fluxurilor de aprobare și structurii documentelor</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <h4>2. Import / migrare date</h4>
+              <p>Preluare listă angajați din REGES și date din tabele existente, cu validare și corecții</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+              </div>
+              <h4>3. Personalizări &amp; formulare</h4>
+              <p>Adaptarea câmpurilor, nomenclatoarelor și șabloanelor (cereri, dispoziții, adeverințe)</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+              </div>
+              <h4>4. Instruire</h4>
+              <p>Training pentru utilizatori, lansare în producție și suport de stabilizare</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALE ===== -->
+  <section id="testimoniale" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Testimoniale</span>
+        <h2>Ce spun instituțiile care folosesc SIRU</h2>
+        <p>Experiențe reale de la specialiști HR din instituții publice care au implementat platforma SIRU.</p>
+      </div>
+      <div class="testimoniale-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars"><span class="star">★</span><span class="star">★</span><span
+              class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="testimonial-text">„Înainte de SIRU gestionam concediile în Excel și mereu apăreau erori la pontaj.
+            Acum totul e corelat automat — concediile aprobate se reflectă imediat și nu mai avem discrepanțe la
+            salarizare."</p>
+          <div class="testimonial-author">
+            <div class="author-av auth-av-a">AM</div>
+            <div>
+              <div class="author-name">Ana M.</div>
+              <div class="author-role">Șef serviciu Resurse Umane, Primărie</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-stars"><span class="star">★</span><span class="star">★</span><span
+              class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="testimonial-text">„Implementarea a mers foarte bine. Echipa SIRU ne-a ajutat să migrăm datele din
+            REGES și să configurăm șabloanele pentru dispoziții. Angajații noștri s-au adaptat rapid, iar dosarele
+            electronice ne economisesc mult timp."</p>
+          <div class="testimonial-author">
+            <div class="author-av auth-av-b">IP</div>
+            <div>
+              <div class="author-name">Ion P.</div>
+              <div class="author-role">Director administrativ, Instituție publică</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-stars"><span class="star">★</span><span class="star">★</span><span
+              class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="testimonial-text">„Modulul de SSM și protecția muncii ne-a rezolvat o problemă veche — acum avem
+            toate instruirile înregistrate și documentele justificative atașate direct. La orice control, totul e gata
+            de prezentat."</p>
+          <div class="testimonial-author">
+            <div class="author-av auth-av-c">RD</div>
+            <div>
+              <div class="author-name">Rodica D.</div>
+              <div class="author-role">Responsabil SSM, Primărie</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="trust-bar reveal">
+        <div class="trust-stat">
+          <div class="trust-stat-num">12</div>
+          <div class="trust-stat-lbl">Module integrate</div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-stat">
+          <div class="trust-stat-num">Cloud</div>
+          <div class="trust-stat-lbl">Date securizate</div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-stat">
+          <div class="trust-stat-num">24/7</div>
+          <div class="trust-stat-lbl">Suport tehnic dedicat</div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-stat">
+          <div class="trust-stat-num">PDF</div>
+          <div class="trust-stat-lbl">Export documente și fișiere</div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-stat">
+          <div class="trust-stat-num">100%</div>
+          <div class="trust-stat-lbl">Date centralizate in cloud</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div>
+            <span class="section-label">Contact</span>
+            <h2>Hai să vorbim despre platforma SIRU</h2>
+          </div>
+          <p>Contactează-ne pentru o prezentare a platformei SIRU sau pentru o ofertă personalizată pentru instituția
+            ta. Suntem disponibili pentru primării și instituții publice din România.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                  <line x1="12" y1="18" x2="12.01" y2="18" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-size:.78rem;color:var(--gray-400);margin-bottom:2px;">Telefon</div>
+                <strong style="font-size:.9rem;color:var(--gray-800);">0232 230 039</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-size:.78rem;color:var(--gray-400);margin-bottom:2px;">Email</div>
+                <strong style="font-size:.9rem;color:var(--gray-800);">softxpert.office@gmail.com</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="10" r="3" />
+                  <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 6.9 8 11.7z" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-size:.78rem;color:var(--gray-400);margin-bottom:2px;">Locație</div>
+                <strong style="font-size:.9rem;color:var(--gray-800);">România</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-size:.78rem;color:var(--gray-400);margin-bottom:2px;">Program</div>
+                <strong style="font-size:.9rem;color:var(--gray-800);">Luni – Vineri, 8:00 – 16:00</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal reveal-delay-2">
+          <div class="form-title">Trimite-ne un mesaj</div>
+          <form action="https://formsubmit.co/677576f4cdc4fc765c5bec700657e507" method="POST">
+            <input type="hidden" name="_subject" value="Mesaj nou de pe site SIRU">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://vlagg123.github.io/prezentare-siru/?success=true#contact">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Nume complet *</label>
+                <input type="text" id="fname" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="fphone">Telefon *</label>
+                <input type="tel" id="fphone" name="phone" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="femail">Adresă email *</label>
+              <input type="email" id="femail" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="fmsg">Mesaj *</label>
+              <textarea id="fmsg" name="message"
+                placeholder="Descrie pe scurt problema sau serviciul de care ai nevoie..." required></textarea>
+            </div>
+            <div id="formSuccess" class="form-success" style="display:none; margin-top:16px; margin-bottom:4px;">
+              ✓ Mesajul a fost trimis! Vă vom contacta în cel mai scurt timp.
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+              Trimite mesajul
+            </button>
+          </form>
+          <script>
+            if (new URLSearchParams(window.location.search).get('success') === 'true') {
+              document.getElementById('formSuccess').style.display = 'block';
+              history.replaceState(null, '', window.location.pathname);
+              document.getElementById('contact').scrollIntoView();
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand reveal">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6 2 3 7 3 12s3 10 9 10 9-5 9-10S18 2 12 2zM8 10c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-4z" />
+              </svg>
+            </div>
+            SIRU
+          </div>
+          <p class="footer-tagline">Sistem Integrat Resurse Umane — platformă digitală pentru administrarea completă a
+            personalului în instituții publice din România.</p>
+          <p style="font-size:.78rem;color:rgba(255,255,255,.30);">Centralizare. Trasabilitate. Eficiență.</p>
+        </div>
+        <div class="footer-col reveal reveal-delay-1">
+          <h4>Linkuri rapide</h4>
+          <ul>
+            <li><a href="#hero">Acasă</a></li>
+            <li><a href="#despre">Despre noi</a></li>
+            <li><a href="#servicii">Servicii</a></li>
+            <li><a href="#informatii">Informatii</a></li>
+            <li><a href="#testimoniale">Testimoniale</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col reveal reveal-delay-2">
+          <h4>Module</h4>
+          <ul>
+            <li><a href="#servicii">Fișa postului &amp; Dispoziții</a></li>
+            <li><a href="#servicii">Contract de muncă &amp; Documente</a></li>
+            <li><a href="#servicii">Concedii &amp; Adeverințe</a></li>
+            <li><a href="#servicii">Pontaj &amp; Salarizare</a></li>
+            <li><a href="#servicii">Evaluare &amp; Perfecționări</a></li>
+            <li><a href="#servicii">SSM &amp; Disciplină</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SIRU by SoftXpert – Sistem Integrat Resurse Umane. Toate drepturile rezervate.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Politică de confidențialitate</a>
+          <a href="#">Termeni și condiții</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
